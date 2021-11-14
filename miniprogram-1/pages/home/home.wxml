@@ -1,0 +1,70 @@
+<!--pages/home/home.wxml-->
+<!--搜索栏,需要固定-->
+<view class="search-box">
+    <view class="search">
+        <view class="input">
+            <input type="text" placeholder="🔍 搜索菜谱和食材"/>
+        </view>
+    </view>
+</view>
+<!--橱窗展示模块-->
+<!--轮播图的实现-->
+<view class="BigImg">
+<!--
+    swiper存在默认的宽度和高度，分别100%和150rpx
+    image也存在默认的宽度和高度 320px*240px
+-->
+    <swiper style="height: 600rpx;" autoplay indicator-dots="true" circular="true">
+        <swiper-item wx:for="{{swiperList}}"
+        wx:key="item">
+            <image src="{{item.img}}" style="width: 100%;height: 600rpx;"></image>
+        </swiper-item>
+    </swiper>
+</view>
+<!--导航模块-->
+<view class="nav">
+    <view class="nav-item1">
+     <!--navigator保留当前页，跳转到新页面，可后退返回-->
+     <!--
+        <navigator url='../sort/sort.wxml' open-type="navigate" hover-class="navigator-hover">
+        不成功，因为与tabBar冲突
+    -->
+            <view class="text">
+                <view class="big-size-text">早中晚餐</view>
+                <view class="small-size-text">每日三餐推荐</view>
+            </view>
+        <view class="nav-img">
+            <image src="../../img/像素_兔子.png"></image>
+        </view>
+    </view>
+    <view class="nav-item2">
+        <view class="text">
+             <view class="big-size-text">精选菜谱</view>
+             <view class="small-size-text">一周精选菜谱</view>
+         </view>
+        <view class="nav-img">
+            <image src="../../img/像素_爱心.png"></image>
+        </view>
+    </view>
+</view>
+<!--热门推荐模块-->
+<view class="adv">
+    <view class="adv-head">
+        <view class="adv-left">热门推荐</view>
+        <view class="adv-right" bindtap="toPage">查看全部 >></view>
+    </view>
+    <view class="adv-content">
+        <image src="../../img/东南亚.jpg"></image>
+        <image src="../../img/手包肉.jpg"></image>
+        <image src="../../img/沙爹串.jpg"></image>
+        <image src="../../img/粉蒸排骨.jpg"></image>
+    </view>
+</view>
+<!--分割线-->
+<view class="hr">
+</view>
+<!--列表内容模块-->
+<!--内容长得都一样，可以引用模板-->
+<import src="../template/home-template.wxml"></import>
+<view class="goodText">- 本周佳作 -</view>
+<template is='home' data='{{array}}'></template>

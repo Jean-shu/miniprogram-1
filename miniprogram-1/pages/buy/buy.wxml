@@ -1,0 +1,50 @@
+<!--pages/buy/buy.wxml-->
+<!--顶部滑动导航栏（两项——推荐，全部）-->
+<view class="topNav">
+    <view class="{{currentIndex==0?'selected':'normal'}}" id="0" bindtap="changeTopNavIndex">
+        <view>推荐</view>
+    </view>
+    <view id="1"class="{{currentIndex==1?'selected':'normal'}}" bindtap="changeTopNavIndex">
+        <view>全部</view>
+    </view>
+</view>
+<!--滑动导航栏对应的页面切换-->
+<!--使用swiper组件实现滑动效果-->
+<swiper current="{{currentIndex}}" style="height: {{winHeight}}rpx;">
+    <swiper-item>
+        <!--推荐产品-->
+                <view wx:for="{{advice}}" wx:key='item' class="adviceGood" id="{{item.id}}" bindtap="goodsDetail">
+                    <view>
+                        <image src="{{item.img}}" style="width: 500rpx;height: 400rpx;"></image>
+                    </view>
+                    <view style="width: 300rpx;" class="info">
+                        <view>{{item.name}}</view>
+                        <view>{{item.price}}</view>
+                    </view>  
+                </view>      
+    </swiper-item>
+    <swiper-item>
+        <!--全部产品-->
+        <!--轮播图,使用滚动视图来做-->
+        <scroll-view scroll-x="true">
+            <view style="display: flex; flex-direction: row;">
+                <view wx:for="{{all}}" wx:key="item" style="width:220rpx" id="{{item.id}}" bindtap="detail">
+                    <view style="width: 220rpx;">
+                       <image src="{{item.img}}" style="width: 200rpx;height: 220rpx;"></image>
+                    </view>
+                    <view>{{item.name}}</view>
+                </view>
+            </view>
+        </scroll-view>
+        <view wx:for="{{advice}}" wx:key='item' class="adviceGood" id="{{item.id}}" bindtap="goodsDetail">
+                    <view>
+                        <image src="{{item.img}}" style="width: 400rpx;height: 350rpx;"></image>
+                    </view>
+                    <view style="width: 300rpx;" class="info">
+                        <view>{{item.name}}</view>
+                        <view>{{item.price}}</view>
+                    </view>  
+        </view>   
+    </swiper-item>
+</swiper>
+

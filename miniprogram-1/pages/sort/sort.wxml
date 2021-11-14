@@ -1,0 +1,36 @@
+<!--pages/sort/sort.wxml-->
+<!--
+    1. 渲染数据
+    2. 切换效果
+    3. 优化
+-->
+<!--搜索栏,需要固定-->
+<view class="search-box">
+    <view class="search">
+        <view class="input">
+            <input type="text" placeholder="🔍 搜索菜谱和食材"/>
+        </view>
+    </view>
+</view>
+<view class="cates_container">
+    <!--左侧-->
+    <scroll-view scroll-y="true" class="left_cates">
+        <view class="{{index==currentIndex?'active':'menu_item'}}" wx:for="{{leftMenuList}}" wx:key="this" bindtap="handleItemTap" data-index="{{index}}">{{item}}</view>
+    </scroll-view>
+    <!--右侧-->
+    <scroll-view scroll-x="true" class="right_cates">
+        <view class="goods_group" wx:for="{{rightContent}}" wx:for-index="index1" wx:for-item="item1" >
+            <view class="goods_title">
+                <text class="delimeter">/</text>
+                <text class="title">{{item1.cat_name}}</text>
+                <text class="delimeter">/</text>
+            </view>
+            <view class="goods_list">
+                <navigator wx:for="{{item1.children}}" wx:for-index="index2" wx:for-item="item2" wx:key="cat_id">
+                    <image src="{{item2.cat_icon}}" style="width: 60rpx; height: 60rpx;text-align: center;" ></image>
+                    <view class="goods_name">{{item2.cat_name}}</view>
+                </navigator>
+            </view>
+        </view>
+    </scroll-view>
+</view>

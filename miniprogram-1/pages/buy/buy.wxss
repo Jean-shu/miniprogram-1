@@ -1,0 +1,30 @@
+/* pages/buy/buy.wxss */
+.topNav{
+    display: flex;
+    flex-direction: row;
+    font-weight: 600;
+}
+.selected{
+    width:80rpx;
+    margin-left: 200rpx;
+    border-bottom: 5rpx solid plum;
+    text-align: center;
+}
+.normal{
+    width:80rpx;
+    margin-left: 200rpx;
+    border-bottom: none;
+    text-align: center;
+}
+.adviceGood{
+    display: flex;
+    flex-direction: row;
+    margin: 20rpx 0px;
+    border-bottom: 2rpx solid #000000;
+}
+.info{
+    margin-top: 130rpx;
+    margin-left: 30rpx;
+    font-size: large;
+    font-weight: 600;
+}

@@ -1,0 +1,42 @@
+/* pages/login/login.wxss */
+.content{
+    margin: 80rpx;
+}
+.username{
+    display: flex;
+    flex-direction: row;
+    padding-left: 40rpx;
+    padding-top: 40rpx;
+    padding-bottom: 40rpx;
+    width: 100%;
+}
+.passWd{
+    display: flex;
+    flex-direction: row;
+    padding-left: 40rpx;
+    padding-top: 40rpx;
+    padding-bottom: 40rpx;
+    width: 100%;
+}
+.title{
+    width:150rpx;
+    font-weight: 600;
+}
+.hr{
+    width: 100%;
+    margin: 0 auto;
+    color: gray;
+    border: 2rpx solid;
+    opacity: 0.3;
+}
+.register{
+    display: flex;
+    flex-direction: row;
+}
+.register view{
+    margin-top: 40rpx;
+    margin-left: 25rpx;
+    padding:50rpx;
+    font-size: 30rpx;
+    font-weight: 500;
+}

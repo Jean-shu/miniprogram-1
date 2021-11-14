@@ -1,0 +1,30 @@
+<!--pages/login/login.wxml-->
+<view class="content">
+    <!-- 用户名 -->
+    <view class="username">
+        <view class="title">用户名： </view>
+        <view class="userId">
+            <input type="text" placeholder="用户名 / 邮箱 / 手机号" placeholder-style="color: #999" bindinput="usernameInput"/>
+        </view>
+    </view>
+    <!--分割线-->
+    <view class="hr"></view>
+    <!--密码-->
+    <view class="passWd">
+        <view class="title">密  码： </view>
+        <view class="passwdContent">
+            <input type="text" placeholder="输入密码" placeholder-style="color:#999" bindinput="passwdInput"/>
+        </view>
+    </view>
+    <!--登录按钮-->
+    <button type="primary" class="loginBtn" disabled="{{loginBtnState}}" bindtap="login" style="width: 90%;">登录</button>
+    <!--注册-->
+    <view class="register">
+        <view>
+            <navigator open-type="navigate" url="../phone/phone">手机号快速注册</navigator>
+        </view>
+        <view>
+            <navigator open-type="navigate" url="../phone/phone">找回密码</navigator>
+        </view>
+    </view>
+</view>

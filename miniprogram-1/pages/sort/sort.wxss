@@ -1,0 +1,67 @@
+/* pages/sort/sort.wxss */
+.search-box{
+    height: 100rpx;
+    width: 100%;
+    background-color: black;
+    position: fixed;
+}
+.search{
+    border-radius: 10rpx;
+    position: fixed;
+    background-color: white;
+    height: 80rpx;
+    width: 90%;
+    margin-left: 5%;
+}
+.input{
+    text-align: center;
+    padding-top:15rpx;
+}
+.cates_container{
+    height:1015rpx;
+    display: flex;
+    flex-direction: row;
+    padding-top: 100rpx;
+}
+.left_cates{
+    width:30%;
+    height: 100%;
+    border-right: 2rpx #ccc solid;
+}
+.right_cates{
+    width:70%;
+    height:100%;
+}
+.menu_item{
+    height: 80rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size:30rpx ;
+}
+.goods_list{
+    display: flex;
+    flex-wrap: wrap;
+}
+.goods_list navigator{
+    width: 33.33%;
+    text-align: center;
+}
+.delimeter{
+    color: #ccc;
+    padding: 0 10rpx;
+}
+.goods_title{
+    text-align: center;
+    padding: 20rpx 0rpx;
+}
+.active{
+    height: 80rpx;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size:30rpx ;
+    font-weight: 600;
+    color: plum;
+    border-left: 5rpx solid rgb(175, 54, 54);
+}

@@ -1,0 +1,28 @@
+/* pages/phone/phone.wxss */
+.phonebg{
+    border: 2rpx solid #ccc;
+    width: 90%;
+    height: 100rpx;
+    margin: 50rpx auto;
+    border-radius: 10rpx;
+    display: flex;
+    flex-direction: row;
+}
+.phonebg view{
+    margin-top: 30rpx;
+    margin-left: 50rpx;
+}
+.protocol{
+    margin-top: 30rpx;
+    margin-left: 30rpx;
+    margin-bottom: 30rpx;
+}
+.agree{
+    font-size: 30rpx;
+    margin-left: 10rpx;
+    color: #666;
+}
+.protocolText{
+    font-size: 30rpx;
+    font-weight: 600;
+}

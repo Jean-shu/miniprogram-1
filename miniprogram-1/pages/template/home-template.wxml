@@ -1,0 +1,21 @@
+
+<template name='home'>
+    <block wx:for="{{array}}" class="goodThing"> <!--data传递的array-->
+        <view class="item">
+            <image src="{{item.img}}"></image>
+        </view>
+        <view class="desc">
+            <view class="title">
+                {{item.title}}
+            </view>
+            <view class="count">
+                <view class="author"><image src="../../img/个人认证_大V推荐.png" style="height: 40rpx; width: 40rpx;"></image>{{item.author}}
+                </view>
+                <view class="collectNumber"><image src="../../img/_收藏2 (1).png" style="height: 35rpx; width: 35rpx;"></image>{{item.collectNumber}}收藏</view>
+                <view class="browserNumber"><image src="../../img/观看.png" style="height: 35rpx; width: 35rpx;"></image>{{item.browserNumber}}浏览</view>
+            </view>
+        </view>
+        <!--分割线-->
+        <view class="content-hr"></view>
+    </block>
+</template>
